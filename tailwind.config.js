@@ -8,7 +8,7 @@ export default {
     join(__dirname, "./index.html"),
     join(__dirname, "./src/**/*.{js,ts,jsx,tsx}"),
   ],
-  darkMode: "class", // Bunu eklemiş olman önemli
+  darkMode: "class",
   theme: {
     extend: {},
   },
