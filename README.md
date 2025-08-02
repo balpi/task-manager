@@ -1,111 +1,122 @@
-📝 Task Manager App
-A responsive task management application built with React, Vite, Tailwind CSS, and TypeScript. Includes dark/light theme toggle, filtering, editing, and route navigation with React Router.
+# 📝 Task Manager App
 
-🚀 Features
-⚛️ React + Vite: Lightning-fast frontend framework with instant hot-reload.
+A responsive task management application built with **React**, **Vite**, **Tailwind CSS**, and **TypeScript**. Includes dark/light theme toggle, task filtering and editing, and route navigation using React Router.
 
-🎨 Tailwind CSS v4: Custom design using utility-first styling.
+🔗 **Live Demo**: [task-manager.vercel.app](https://task-manager-orcin-rho.vercel.app/)
 
-🌓 Theme Support: Light/Dark mode toggle via ThemeContext.
+---
 
-🗃️ Task Cards: Interactive cards with editable modal dialogs.
+## 🚀 Features
 
-🔍 Filter Logic: Filter tasks by status (pending, in progress, done).
+- ⚛️ **React + Vite** – Lightning-fast frontend with instant hot reload.
+- 🎨 **Tailwind CSS v4** – Custom design with utility-first styling.
+- 🌓 **Theme Support** – Light/Dark mode toggle via ThemeContext.
+- 🗃️ **Task Cards** – Interactive cards with editable modal dialogs.
+- 🔍 **Filter Logic** – Filter tasks by status (pending, in progress, done).
+- 🧭 **Routing**
+  - `/about` – Learn more about the project.
+  - `*` – Catch-all NotFound page.
+- 🧩 **Responsive Design** – Works across all screen sizes.
 
-🧭 Routing:
+---
 
-/about – Learn more about the project.
+## 📸 Screenshots
 
-- – Catch-all for undefined routes with a NotFound page.
+| Light Theme                         | Dark Theme                        |
+| ----------------------------------- | --------------------------------- |
+| ![Light](./public/ssLightTheme.png) | ![Dark](./public/ssDarkTheme.png) |
 
-🧩 Responsive Design: Works beautifully across screen sizes.
+---
 
-📸 Screenshots
-Light Theme("./public/ssLightTheme.png")
-Dark Theme("./public/ssDarkTheme.png")
+## 🧱 Tech Stack
 
-🧱 Tech Stack
-Framework: React + TypeScript
+- **Framework**: React + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS v4
+- **Routing**: React Router v6
+- **State Management**: useState + Context API
 
-Build Tool: Vite
+---
 
-Styling: Tailwind CSS v4
+## 📁 Folder Structure
 
-Routing: React Router v6
-
-State Management: useState + Context API
-
-📁 Folder Structure
-pgsql
-Copy
-Edit
+```
 task-manager/
-├── src/
-│ ├── components/ # Reusable UI components (TaskCard, Header, etc.)
-│ ├── context/ # ThemeContext for dark/light mode
-│ ├── pages/ # Page-level components (Home, About, NotFound)
-│ ├── App.tsx # Main app wrapper
-│ ├── main.tsx # App entry point
-│ └── index.css # Tailwind imports and custom variant
 ├── public/
-|\_\_ routes
-├── tailwind.config.ts # Tailwind configuration
-├── postcss.config.js # PostCSS config
+├── src/
+│   ├── components/        # Reusable UI (TaskCard, Header)
+│   ├── context/           # ThemeContext logic
+│   ├── pages/             # Route pages (Home, About, NotFound)
+│   ├── App.tsx            # App wrapper
+│   ├── main.tsx           # Entry point
+│   └── index.css          # Tailwind import and fix
+├── tailwind.config.ts     # Tailwind config
+├── postcss.config.js      # PostCSS plugins
 ├── index.html
-├── README.md
-🎛 Theme Toggle Fix (Tailwind v4)
-Tailwind CSS v4 dropped automatic dark: variant support. To fix dark mode:
+└── README.md
+```
 
-Update your index.css:
+---
 
-css
+## 🎛 Theme Toggle Fix for Tailwind v4
 
+Tailwind CSS v4 dropped automatic `dark:` variant support.
+
+**To fix this:**
+
+Update your `index.css`:
+
+```css
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark \*));
+@custom-variant dark (&:where(.dark, .dark *));
+```
 
-Without this, your dark: classes won’t work — even if the DOM updates!
+> Without this, your `dark:` classes won’t work — even if the HTML updates properly.
 
-🧪 Run Locally
-bash
-Copy
-Edit
+---
 
-# 1. Clone repo
+## 🧪 Run Locally
 
+```bash
+# 1. Clone the repo
 git clone https://github.com/your-username/task-manager.git
 cd task-manager
 
 # 2. Install dependencies
-
 npm install
 
-# 3. Start dev server
-
+# 3. Start the dev server
 npm run dev
-📌 Planned Improvements
-✅ Task filtering by status
+```
 
-✅ Modal editing
+---
 
-Drag and drop reordering
+## 📌 Planned Improvements
 
-Backend integration (Firebase or Supabase)
+- ✅ Task filtering by status
+- ✅ Modal editing
+- ⏳ Drag and drop reordering
+- ⏳ Backend integration (Firebase or Supabase)
+- ⏳ User login with JWT
 
-User login with JWT
+---
 
-🙋‍♂️ About the Developer
-Hi, I'm Serhat — a former teacher turned developer, now building real-world React + .NET projects. I’m currently focused on relocating to Germany for a software engineering career.
-Check out more of my work on GitHub.
+## 🙋‍♂️ About the Developer
 
-⭐️ Show Support
-If you found this project useful:
+Hi, I'm **Serhat** — a former teacher turned developer, currently building real-world React + .NET projects. I’m actively working on relocating to Germany for a software engineering career.
 
-Star this repo ⭐
+👉 [GitHub: @balpi](https://github.com/balpi)
 
-Share it on LinkedIn or Twitter 🚀
+---
 
-Mention @balpi and let’s connect!
+## ⭐️ Show Support
+
+- Star this repo ⭐
+- Share it on LinkedIn or Twitter 🚀
+- Mention `@balpi` and let’s connect!
+
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License – see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.
